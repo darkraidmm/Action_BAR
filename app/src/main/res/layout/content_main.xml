@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ivory"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.boojadrive.action_bar.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <LinearLayout
+        android:layout_width="344dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="283dp"
+            android:orientation="vertical"
+            android:weightSum="6">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="22dp"
+                android:text="귀하의 포인트는 4,000 원 입니다." />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">>
+
+                <com.boojadrive.action_bar.Custom_layout
+                    android:id="@+id/CustomStart"
+                    style="@style/AppTheme.NoActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="4.47"
+                    android:background="@color/lightcoral2"
+
+                    app:button2="출발지 검색중"
+                    app:symbol="@mipmap/ic_beenhere_black_36dp"
+                    app:textColor="@color/colorPrimaryDark" />
+
+                <com.boojadrive.action_bar.Custom_layout
+                    android:id="@+id/Customend"
+                    style="@style/AppTheme.NoActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="4.47"
+                    android:background="@color/yellow2"
+                    app:bg="@drawable/driver"
+                    app:button2="목적지 검색"
+                    app:symbol="@mipmap/ic_directions_black_36dp"
+                    app:textColor="@color/colorPrimaryDark" />
+
+                <com.boojadrive.action_bar.Faivort_Button
+                    android:id="@+id/CustomTest"
+                    style="@style/AppTheme.NoActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="4.47"
+                    android:background="@color/lightcoral2"
+                    app:text22="집으로 "
+                    app:text33="자주가는곳 " />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="4.47"
+                    android:text="예샹요금을 조절해서 가격을 결정한후 호출해주세요. 빠른배차를 위해 적정한 요금을 부탁드립니다."
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/yellow2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/up_button"
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+
+                android:onClick="Up_button_clicked"
+                android:text="UP" />
+
+            <EditText
+                android:id="@+id/PRICE_EDIT_TEXT"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/down_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:onClick="Down_button_clicked"
+                android:text="DOWN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/lightcoral2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/card_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="card_button_clicked"
+                android:text="카드결제" />
+
+            <Button
+                android:id="@+id/cash_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="cash_button_clicked"
+                android:text="현금결제" />
+
+            <Button
+                android:id="@+id/point_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:onClick="point_button_clicked"
+                android:text="포인트결제" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="CallButton_clicked"
+            android:text="콜센타 연결" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

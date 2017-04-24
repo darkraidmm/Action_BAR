@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="LoginButton2">
+        <attr name="bg22" format="reference|integer" />
+        <attr name="symbol22" format="reference|integer" />
+        <attr name="text22" format="reference|string" />
+        <attr name="symbol33" format="reference|integer" />
+        <attr name="text33" format="reference|string" />
+    </declare-styleable>
+
+
+</resources>
